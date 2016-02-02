@@ -1,53 +1,5 @@
 # Transition-to-bug
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+[Reproduces a bug](https://github.com/asakusuma/transition-to-bug/blob/master/app/routes/index.js) in ember canary where [route.transitionTo](http://emberjs.com/api/classes/Ember.Route.html#method_transitionTo) returns a promise when passed a url.
 
-## Prerequisites
-
-You will need the following things properly installed on your computer.
-
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
-
-## Running / Development
-
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Looks like the issue was [introduced in this commit](https://github.com/emberjs/ember.js/commit/ef7108a8d1a97fc263918a0fd37db72889419b4c#diff-985dc4a078da4636eff18be21aa7f9e6L303).
